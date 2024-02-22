@@ -3,6 +3,8 @@ import Cardapio from "./pages/Cardapio";
 import Home from "./pages/Home";
 import HomeTemplate from "./templates/HomeTemplate";
 import Sobre from "./pages/Sobre";
+import Prato from "./pages/Prato";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter([
     {
@@ -19,9 +21,17 @@ const router = createBrowserRouter([
             {
                 path: '/sobre',
                 element: <Sobre />
-            }
+            }            
         ]
     },
+    {
+        path: '/prato/:id',
+        element: <Prato />
+    },
+    {
+        path: '*', 
+        element: <NotFound />
+    }
 ])
 
 export default router;
